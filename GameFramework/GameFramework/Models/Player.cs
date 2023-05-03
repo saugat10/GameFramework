@@ -147,7 +147,7 @@ namespace GameFramework.Models
         {
             var directions = new[] { 'w', 'a', 's', 'd' };
             var direction = directions[random.Next(directions.Length)];
-            Logger.Log($"Player moved to new direction ({direction}).");
+            //Logger.Log($"Player moved to new direction ({direction}).");
             MoveToRandomPosition(distance, world, direction);
         }
 
@@ -179,7 +179,6 @@ namespace GameFramework.Models
                 if (world.grid[newX, newY] == ' ')
                 {
                     Logger.Log($"Player moved to new position ({newX}, {newY}).");
-
 
                     world.grid[position.X, position.Y] = ' ';
                     position.X = newX;

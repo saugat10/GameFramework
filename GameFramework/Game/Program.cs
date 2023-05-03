@@ -2,11 +2,11 @@
 using GameFramework.Models;
 using System.Threading.Tasks;
 
-World world = new World(6, 6);
+World world = new World(10, 10);
 
-Player player = new Player("Player", 100, 2, 30);
+Player player = new Player("Player", 50, 2, 30);
 
-Enemy enemy = new Enemy("Enemy", 100, 10);
+Enemy enemy = new Enemy("Enemy", 50, 10);
 var counter = 0;
 
 
@@ -64,14 +64,14 @@ while (player.Health > 0 && enemy.Health > 0)
     playerTurn = !playerTurn;
 }
 
-Console.Clear();
+
 if (player.Health <= 0)
 {
-    Logger.Log("Game over. You died.");
+    Logger.Log("Game Over. Player died.");
 }
 else
 {
-    Logger.Log("Congratulations. You won.");
+    Logger.Log("Game Over. Enemy Died.");
 }
 
 Console.ReadLine();
@@ -85,7 +85,7 @@ void PlayerTurn(int getCounter)
 
         Logger.Log($"You attacked {player.Damage}");
     }
-    else if (getCounter % 5 == 0 && Position.IsObjectWithInGivenNumberOfCells(player.position, enemy.position, 5)) //decorator design pattern used here
+    else if (getCounter % 3 == 0 && Position.IsObjectWithInGivenNumberOfCells(player.position, enemy.position, 5)) //decorator design pattern used here
     {
         
         IPowerAttack powerAttack = new AttackDecoratorPattern(player);
@@ -105,7 +105,7 @@ void PlayerTurn(int getCounter)
         PickUpItems();
         player.PlayerRandomMovement(1, world);
     }
-    Thread.Sleep(500);
+    Thread.Sleep(1000);
 }
 
 void PickUpItems()
@@ -151,7 +151,7 @@ void EnemyTurn()
         enemy.EnemyRandomMovement(1, world);
     }
 
-    Thread.Sleep(500);
+    Thread.Sleep(1000);
 }
 
 void PickUpItemsForEnemy()
