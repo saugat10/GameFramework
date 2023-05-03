@@ -1,0 +1,149 @@
+Logged At - 5/4/2023 12:57:12 AM: World with X: 6 and Y: 6 has been created
+Logged At - 5/4/2023 12:57:12 AM: Player with name: Player, health: 100, damage: 2, energy: 30 is created
+Logged At - 5/4/2023 12:57:12 AM: Enemy with name: Enemy, health: 100, damage: 10 is created
+Logged At - 5/4/2023 12:57:12 AM: Added a Player at position (1, 5).
+Logged At - 5/4/2023 12:57:12 AM: Added a Enemy at position (5, 1).
+Logged At - 5/4/2023 12:57:12 AM: Added an attack item knife at position (4, 2).
+Logged At - 5/4/2023 12:57:12 AM: Added an attack item sword at position (1, 2).
+Logged At - 5/4/2023 12:57:12 AM: Added an attack item mace at position (3, 3).
+Logged At - 5/4/2023 12:57:12 AM: Added an attack item knife at position (1, 4).
+Logged At - 5/4/2023 12:57:12 AM: Added an attack item sword at position (4, 3).
+Logged At - 5/4/2023 12:57:12 AM: Added an attack item mace at position (3, 3).
+Logged At - 5/4/2023 12:57:12 AM: Added a world object wooden shield at position (2, 4).
+Logged At - 5/4/2023 12:57:12 AM: Added a world object stone shield at position (3, 1).
+Logged At - 5/4/2023 12:57:12 AM: Added a world object iron shield at position (1, 4).
+Logged At - 5/4/2023 12:57:12 AM: Added a world object wooden shield at position (2, 1).
+Logged At - 5/4/2023 12:57:12 AM: Added a world object stone shield at position (4, 4).
+Logged At - 5/4/2023 12:57:12 AM: Added a world object iron shield at position (2, 3).
+Logged At - 5/4/2023 12:57:14 AM: Player's turn.
+Logged At - 5/4/2023 12:57:14 AM: You picked up knife, + 13 damage.
+Logged At - 5/4/2023 12:57:14 AM: You picked up iron shield, + 5 defence.
+Logged At - 5/4/2023 12:57:14 AM: Removed an item at position (1, 4).
+Logged At - 5/4/2023 12:57:14 AM: Removed an item at position (1, 4).
+Logged At - 5/4/2023 12:57:14 AM: Player moved to new direction (a).
+Logged At - 5/4/2023 12:57:14 AM: Connot move out of the world
+Logged At - 5/4/2023 12:57:17 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:17 AM: Connot move out of the world
+Logged At - 5/4/2023 12:57:20 AM: Player's turn.
+Logged At - 5/4/2023 12:57:20 AM: Player moved to new direction (w).
+Logged At - 5/4/2023 12:57:20 AM: Player moved to new position (1, 4).
+Logged At - 5/4/2023 12:57:22 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:22 AM: Enemy moved to new position (4, 1).
+Logged At - 5/4/2023 12:57:25 AM: Player's turn.
+Logged At - 5/4/2023 12:57:25 AM: You picked up wooden shield, + 3 defence.
+Logged At - 5/4/2023 12:57:25 AM: Removed an item at position (2, 4).
+Logged At - 5/4/2023 12:57:25 AM: Player moved to new direction (a).
+Logged At - 5/4/2023 12:57:25 AM: Connot move out of the world
+Logged At - 5/4/2023 12:57:27 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:27 AM: Enemy picked up knife.
+Logged At - 5/4/2023 12:57:27 AM: Removed an item at position (4, 2).
+Logged At - 5/4/2023 12:57:27 AM: Enemy picked up knife.
+Logged At - 5/4/2023 12:57:27 AM: Enemy picked up stone shield.
+Logged At - 5/4/2023 12:57:27 AM: Removed an item at position (3, 1).
+Logged At - 5/4/2023 12:57:27 AM: Enemy picked up stone shield.
+Logged At - 5/4/2023 12:57:27 AM: Enemy moved to new position (5, 1).
+Logged At - 5/4/2023 12:57:30 AM: Player's turn.
+Logged At - 5/4/2023 12:57:30 AM: Player moved to new direction (s).
+Logged At - 5/4/2023 12:57:30 AM: Player moved to new position (1, 5).
+Logged At - 5/4/2023 12:57:33 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:33 AM: Enemy moved to new position (4, 1).
+Logged At - 5/4/2023 12:57:35 AM: Player's turn.
+Logged At - 5/4/2023 12:57:35 AM: Player moved to new direction (a).
+Logged At - 5/4/2023 12:57:35 AM: Connot move out of the world
+Logged At - 5/4/2023 12:57:38 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:38 AM: Enemy moved to new position (3, 1).
+Logged At - 5/4/2023 12:57:41 AM: Player's turn.
+Logged At - 5/4/2023 12:57:41 AM: Player moved to new direction (w).
+Logged At - 5/4/2023 12:57:41 AM: Player moved to new position (1, 4).
+Logged At - 5/4/2023 12:57:43 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:43 AM: Enemy picked up wooden shield.
+Logged At - 5/4/2023 12:57:43 AM: Removed an item at position (2, 1).
+Logged At - 5/4/2023 12:57:43 AM: Enemy picked up wooden shield.
+Logged At - 5/4/2023 12:57:43 AM: Enemy moved to new position (3, 2).
+Logged At - 5/4/2023 12:57:46 AM: Player's turn.
+Logged At - 5/4/2023 12:57:46 AM: Player moved to new direction (w).
+Logged At - 5/4/2023 12:57:46 AM: Player moved to new position (1, 3).
+Logged At - 5/4/2023 12:57:48 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:48 AM: Enemy picked up mace.
+Logged At - 5/4/2023 12:57:48 AM: Removed an item at position (3, 3).
+Logged At - 5/4/2023 12:57:48 AM: Enemy picked up mace.
+Logged At - 5/4/2023 12:57:48 AM: Enemy picked up mace.
+Logged At - 5/4/2023 12:57:48 AM: Removed an item at position (3, 3).
+Logged At - 5/4/2023 12:57:48 AM: Enemy picked up mace.
+Logged At - 5/4/2023 12:57:48 AM: Enemy moved to new position (3, 3).
+Logged At - 5/4/2023 12:57:51 AM: Player's turn.
+Logged At - 5/4/2023 12:57:51 AM: You used Power attack on Enemy
+Logged At - 5/4/2023 12:57:51 AM: Player attacked Enemy and dealt 9 damage.
+Logged At - 5/4/2023 12:57:51 AM: You attacked with Fire attack 15
+Logged At - 5/4/2023 12:57:53 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:53 AM: Enemy picked up sword.
+Logged At - 5/4/2023 12:57:53 AM: Removed an item at position (4, 3).
+Logged At - 5/4/2023 12:57:53 AM: Enemy picked up sword.
+Logged At - 5/4/2023 12:57:53 AM: Enemy picked up iron shield.
+Logged At - 5/4/2023 12:57:53 AM: Removed an item at position (2, 3).
+Logged At - 5/4/2023 12:57:53 AM: Enemy picked up iron shield.
+Logged At - 5/4/2023 12:57:53 AM: Enemy moved to new position (3, 4).
+Logged At - 5/4/2023 12:57:56 AM: Player's turn.
+Logged At - 5/4/2023 12:57:56 AM: You picked up sword, + 18 damage.
+Logged At - 5/4/2023 12:57:56 AM: Removed an item at position (1, 2).
+Logged At - 5/4/2023 12:57:56 AM: Player moved to new direction (s).
+Logged At - 5/4/2023 12:57:56 AM: Player moved to new position (1, 4).
+Logged At - 5/4/2023 12:57:59 AM: Enemy's turn.
+Logged At - 5/4/2023 12:57:59 AM: Enemy picked up stone shield.
+Logged At - 5/4/2023 12:57:59 AM: Removed an item at position (4, 4).
+Logged At - 5/4/2023 12:57:59 AM: Enemy picked up stone shield.
+Logged At - 5/4/2023 12:57:59 AM: Enemy moved to new position (3, 3).
+Logged At - 5/4/2023 12:58:01 AM: Player's turn.
+Logged At - 5/4/2023 12:58:01 AM: Player moved to new direction (a).
+Logged At - 5/4/2023 12:58:01 AM: Connot move out of the world
+Logged At - 5/4/2023 12:58:04 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:04 AM: Enemy moved to new position (4, 3).
+Logged At - 5/4/2023 12:58:07 AM: Player's turn.
+Logged At - 5/4/2023 12:58:07 AM: Player moved to new direction (a).
+Logged At - 5/4/2023 12:58:07 AM: Connot move out of the world
+Logged At - 5/4/2023 12:58:09 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:09 AM: Enemy moved to new position (4, 2).
+Logged At - 5/4/2023 12:58:12 AM: Player's turn.
+Logged At - 5/4/2023 12:58:12 AM: Player moved to new direction (s).
+Logged At - 5/4/2023 12:58:12 AM: Player moved to new position (1, 5).
+Logged At - 5/4/2023 12:58:14 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:14 AM: Connot move out of the world
+Logged At - 5/4/2023 12:58:17 AM: Player's turn.
+Logged At - 5/4/2023 12:58:17 AM: Player moved to new direction (s).
+Logged At - 5/4/2023 12:58:20 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:20 AM: Enemy moved to new position (4, 3).
+Logged At - 5/4/2023 12:58:22 AM: Player's turn.
+Logged At - 5/4/2023 12:58:22 AM: Player moved to new direction (d).
+Logged At - 5/4/2023 12:58:22 AM: Connot move out of the world
+Logged At - 5/4/2023 12:58:25 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:25 AM: Enemy moved to new position (3, 3).
+Logged At - 5/4/2023 12:58:27 AM: Player's turn.
+Logged At - 5/4/2023 12:58:27 AM: Player moved to new direction (a).
+Logged At - 5/4/2023 12:58:27 AM: Connot move out of the world
+Logged At - 5/4/2023 12:58:30 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:30 AM: Enemy moved to new position (3, 4).
+Logged At - 5/4/2023 12:58:33 AM: Player's turn.
+Logged At - 5/4/2023 12:58:33 AM: Player moved to new direction (a).
+Logged At - 5/4/2023 12:58:33 AM: Connot move out of the world
+Logged At - 5/4/2023 12:58:35 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:35 AM: Enemy moved to new position (2, 4).
+Logged At - 5/4/2023 12:58:38 AM: Player's turn.
+Logged At - 5/4/2023 12:58:38 AM: Player moved to new direction (w).
+Logged At - 5/4/2023 12:58:38 AM: Player moved to new position (1, 4).
+Logged At - 5/4/2023 12:58:40 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:40 AM: Enemy attacked Player and dealt 49 damage.
+Logged At - 5/4/2023 12:58:40 AM: Enemy attacked 57
+Logged At - 5/4/2023 12:58:43 AM: Player's turn.
+Logged At - 5/4/2023 12:58:43 AM: Player attacked Enemy and dealt 18 damage.
+Logged At - 5/4/2023 12:58:43 AM: You attacked 33
+Logged At - 5/4/2023 12:58:45 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:45 AM: Enemy attacked Player and dealt 49 damage.
+Logged At - 5/4/2023 12:58:45 AM: Enemy attacked 57
+Logged At - 5/4/2023 12:58:48 AM: Player's turn.
+Logged At - 5/4/2023 12:58:48 AM: Player attacked Enemy and dealt 18 damage.
+Logged At - 5/4/2023 12:58:48 AM: You attacked 33
+Logged At - 5/4/2023 12:58:51 AM: Enemy's turn.
+Logged At - 5/4/2023 12:58:51 AM: Enemy attacked Player and dealt 49 damage.
+Logged At - 5/4/2023 12:58:51 AM: Player was defeated!
+Logged At - 5/4/2023 12:58:51 AM: Enemy attacked 57
+Logged At - 5/4/2023 12:58:51 AM: Game over. You died.

@@ -1,82 +1,181 @@
-﻿using GameFramework.Models;
+﻿using GameFramework.Interface;
+using GameFramework.Models;
+using System.Threading.Tasks;
 
-// Create a world
-World world = new World();
-world.MaxX = 100;
-world.MaxY = 100;
+World world = new World(6, 6);
 
-// Create some creatures
-Creature player1 = new Creature();
-player1.Name = "Player 1";
-player1.HitPoints = 100;
-player1.Position = new Position() { X = 10, Y = 10 };
+Player player = new Player("Player", 100, 2, 30);
 
-Creature player2 = new Creature();
-player2.Name = "Player 2";
-player2.HitPoints = 100;
-player2.Position = new Position() { X = 20, Y = 20 };
+Enemy enemy = new Enemy("Enemy", 100, 10);
+var counter = 0;
 
-// Create some objects
-WorldObject object1 = new WorldObject();
-object1.Name = "Object 1";
-object1.Lootable = true;
-object1.Removeable = true;
-object1.Position = new Position() { X = 30, Y = 30 };
 
-WorldObject object2 = new WorldObject();
-object2.Name = "Object 2";
-object2.Lootable = false;
-object2.Removeable = true;
-object2.Position = new Position() { X = 40, Y = 40 };
+world.AddCreature(player);
+world.AddCreature(enemy);
 
-// Create some weapons
-AttackItem sword = new AttackItem();
-sword.Name = "Sword";
-sword.HitPoints = 10;
-sword.Range = 15;
+AttackItem knife = new AttackItem("knife", 13);
+AttackItem sword = new AttackItem("sword", 18);
+AttackItem mace = new AttackItem("mace", 8);
+world.AddWorldObject(knife);
+world.AddWorldObject(sword);
+world.AddWorldObject(mace);
 
-AttackItem bow = new AttackItem();
-bow.Name = "Bow";
-bow.HitPoints = 8;
-bow.Range = 15;
+AttackItem knife1 = new AttackItem("knife", 13);
+AttackItem sword1 = new AttackItem("sword", 18);
+AttackItem mace1 = new AttackItem("mace", 8);
+world.AddWorldObject(knife1);
+world.AddWorldObject(sword1);
+world.AddWorldObject(mace1);
 
-// Create some armor
-DefenceItem shield = new DefenceItem();
-shield.Name = "Shield";
-shield.ReducedHitPoints = 5;
+DefenceItem shield1 = new DefenceItem("wooden shield", 3);
+DefenceItem shield2 = new DefenceItem("stone shield", 4);
+DefenceItem shield3 = new DefenceItem("iron shield", 5);
+world.AddWorldObject(shield1);
+world.AddWorldObject(shield2);
+world.AddWorldObject(shield3);
 
-DefenceItem helmet = new DefenceItem();
-helmet.Name = "Helmet";
-helmet.ReducedHitPoints = 3;
+DefenceItem shield4 = new DefenceItem("wooden shield", 2);
+DefenceItem shield5 = new DefenceItem("stone shield", 3);
+DefenceItem shield6 = new DefenceItem("iron shield", 6);
+world.AddWorldObject(shield4);
+world.AddWorldObject(shield5);
+world.AddWorldObject(shield6);
+bool playerTurn = true;
 
-// Game loop
-while (player1.HitPoints > 0 && player2.HitPoints > 0)
+
+
+while (player.Health > 0 && enemy.Health > 0)
 {
-    // Player 1's turn
-    Console.WriteLine("Player 1's turn:");
-    player1.Hit(player2, sword);
-    player1.Loot(object1);
-    Console.WriteLine();
+    counter++;
+    Thread.Sleep(2000);
+    Console.Clear();
+    player.DisplayPlayerInfo(player);
+    enemy.DisplayEnemyInfo(enemy);
 
-    // Player 2's turn
-    Console.WriteLine("Player 2's turn:");
-    player2.Hit(player1, bow);
-    Console.WriteLine();
+    if (playerTurn)
+    {
+        PlayerTurn(counter);
+    }
+    else
+    {
+        EnemyTurn();
+    }
 
-    // Print status
-    Console.WriteLine("Status:");
-    Console.WriteLine($"{player1.Name}: {player1.HitPoints} HP");
-    Console.WriteLine($"{player2.Name}: {player2.HitPoints} HP");
-    Console.WriteLine();
+    playerTurn = !playerTurn;
 }
 
-// Game over
-if (player1.HitPoints <= 0)
+Console.Clear();
+if (player.Health <= 0)
 {
-    Console.WriteLine($"{player2.Name} wins!");
+    Logger.Log("Game over. You died.");
 }
 else
 {
-    Console.WriteLine($"{player1.Name} wins!");
+    Logger.Log("Congratulations. You won.");
+}
+
+Console.ReadLine();
+
+void PlayerTurn(int getCounter)
+{
+    Logger.Log("Player's turn.");
+    if (Position.IsObjectWithInOneCell(player.position, enemy.position))
+    {
+        player.Attack(enemy);
+
+        Logger.Log($"You attacked {player.Damage}");
+    }
+    else if (getCounter % 5 == 0 && Position.IsObjectWithInGivenNumberOfCells(player.position, enemy.position, 5)) //decorator design pattern used here
+    {
+        
+        IPowerAttack powerAttack = new AttackDecoratorPattern(player);
+        powerAttack = new SuperAttack(powerAttack, 3);
+        if (player.Energy >= 10)
+        {
+            powerAttack.PowerAttack(enemy);
+            Logger.Log($"You attacked with Fire attack {player.Damage}");
+        }
+        else
+        {
+            Logger.Log("Not enough energy");
+        }
+    }
+    else
+    {
+        PickUpItems();
+        player.PlayerRandomMovement(1, world);
+    }
+    Thread.Sleep(500);
+}
+
+void PickUpItems()
+{
+    var objectsToRemove = new List<IWorldObject>();
+    foreach (var obj in world.worldObjects)
+    {
+        if (Position.IsObjectWithInOneCell(player.position, obj.position))
+        {
+            if (obj is DefenceItem)
+            {
+                player.PickUp((DefenceItem)obj); 
+                objectsToRemove.Add(obj);
+                player.Defence += obj.Defence;
+            }
+            else if (obj is AttackItem)
+            {
+                player.PickUp((AttackItem)obj);
+                objectsToRemove.Add(obj);
+                player.Damage += obj.Damage;
+            }
+
+        }
+
+    }
+    foreach (var obj in objectsToRemove)
+    {
+        world.RemoveWorldObject(obj);
+    }
+}
+
+void EnemyTurn()
+{
+    Logger.Log("Enemy's turn.");
+    if (Position.IsObjectWithInOneCell(player.position, enemy.position))
+    {
+        enemy.Attack(player);
+        Logger.Log($"Enemy attacked {enemy.Damage}");
+    }
+    else
+    {
+        PickUpItemsForEnemy();
+        enemy.EnemyRandomMovement(1, world);
+    }
+
+    Thread.Sleep(500);
+}
+
+void PickUpItemsForEnemy()
+{
+    foreach (var obj in world.worldObjects.ToList())
+    {
+        if (Position.IsObjectWithInOneCell(enemy.position, obj.position))
+        {
+            // Have the enemy pick up the object automatically
+            if (obj is DefenceItem)
+            {
+                enemy.PickUp((DefenceItem)obj);
+                world.RemoveWorldObject(obj);
+                Logger.Log($"Enemy picked up {obj.Name}.");
+                enemy.Defence += obj.Defence;
+            }
+            else if (obj is AttackItem)
+            {
+                enemy.PickUp((AttackItem)obj);
+                world.RemoveWorldObject(obj);
+                Logger.Log($"Enemy picked up {obj.Name}.");
+                enemy.Damage += obj.Damage;
+            }
+        }
+    }
 }
 
